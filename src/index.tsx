@@ -1,6 +1,6 @@
-import Default from 'components/Default';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Router from 'router';
 import './index.css';
 
 const root = ReactDOM.createRoot(
@@ -8,6 +8,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Default />
+    <Router />
   </React.StrictMode>
 );

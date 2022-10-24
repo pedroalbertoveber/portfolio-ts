@@ -1,0 +1,144 @@
+@import 'styles/default';
+@import 'styles/breakpoints';
+
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+
+  figure {
+    width: 100%;
+    height: 650px;
+    background-image: url('../../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    display: block;
+
+    figcaption {
+      color: $white-default;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+
+      .title {
+        padding-bottom: 100px;
+
+        h2 {
+          font-family: monospace;
+          font-size: 5rem;
+        }
+
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-top: 10px;
+
+          li {
+
+            margin-right: 15px;
+            
+            img {
+              width: 50px;
+              height: 50px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+      .description {
+        display: flex;
+        align-items: center;
+
+        div {
+          margin: 0 30px;
+          display: flex;
+          align-items: center;
+
+          span {
+            font-size: 1.5rem;
+          }
+
+          svg {
+            font-size: 1.5rem;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-devices) {
+  .mainContainer figure figcaption .title{
+
+    padding-bottom: 50px;
+    margin-top: -50px;
+
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    ul li img{ 
+      width: 40px;
+      height: 40px;
+    }
+  }
+    
+    .mainContainer figure figcaption .description {
+      flex-direction: column;
+      align-items: center;
+
+        div {
+          padding: 10px 0;
+
+        span {
+          font-size: 1rem;
+        }
+
+        svg {
+          font-size: 1.5rem;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+@media screen and (max-width: $smartphones) {
+  .mainContainer figure figcaption .title{
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    ul li img{ 
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .mainContainer figure figcaption .description {
+    flex-direction: column;
+    align-items: center;
+
+      div {
+        padding: 10px 0;
+
+      span {
+        font-size: .8rem;
+      }
+
+      svg {
+        font-size: 1.5rem;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+   
