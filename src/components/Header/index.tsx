@@ -1,7 +1,7 @@
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { ReactElement, useState } from "react";
 import { FiMenu } from 'react-icons/fi';
 import styles from './Header.module.scss';
-import InternalLinks from "./InternalLiks";
+import InternalLinks from "../InternalLiks";
 import SocialMedia from "./SocialMedia";
 
 const Header = ():ReactElement => {

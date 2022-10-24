@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import styles from './InternalLinks.module.scss';
 
 interface Props {
-  linkStyle?: 'mobile',
+  linkStyle?: 'mobile' | 'footer',
 }
 
 const InternalLinks = ({ linkStyle }: Props):ReactElement => {

@@ -30,6 +30,28 @@
   display: none;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+
+  li { 
+    margin-right: 30px;
+    cursor: pointer;
+    &:last-child {
+      margin: 0;
+    }
+
+    a {
+      color: $dark-default;
+      transition: all .2s;
+      
+      &:hover {
+        color: $medium-grey;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $mobile-devices) {
   .mobile {
     display: flex;
@@ -53,5 +75,11 @@
         }
       }
     }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
   }
 }
