@@ -1,0 +1,69 @@
+@import 'styles/default';
+@import 'styles/breakpoints';
+
+.headerContainer {
+  align-items: center;
+  display: flex;
+  padding: 25px $padding-default;
+  background-color: $dark-default;
+  width: 100%;
+  justify-content: space-between;
+  height: 100px;
+
+  figure {
+    width: 75px;
+    height: 75px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .toggleMenu {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: $dark-grey;
+
+  .socialMediaContainer {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $mobile-devices) {
+  .headerContainer {
+    padding: 0 $padding-mobile;
+
+    nav {
+      display: none;
+    }
+
+    .toggleMenu {
+      display: block;
+      cursor: pointer;
+
+      svg {
+        font-size: 1.8rem;
+        color: $white-default;
+        transition: all .2s;
+
+        &:hover {
+          color: $dark-grey;
+        }
+      }
+    }
+  } 
+}

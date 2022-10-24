@@ -1,0 +1,57 @@
+@import 'styles/default';
+@import 'styles/breakpoints';
+
+.internalLinks {
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+
+  li {
+    margin-right: 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    a {
+      font-size: 1.1rem;
+      color: $white-default;
+      font-weight: 300;
+      transition: all .2s;
+
+      &:hover {
+        color: $medium-grey;
+      }
+    }
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: $mobile-devices) {
+  .mobile {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      padding: 15px 0;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid $medium-grey;
+
+      a {
+        color: $white-default;
+        font-weight: 300;
+        transition: all .2s;
+        font-size: 1.2rem;
+
+        &:hover {
+          color: $medium-grey;
+        }
+      }
+    }
+  }
+}
