@@ -15,16 +15,16 @@ const Header = ():ReactElement => {
         <img src="assets/pictures/perfil.jpeg"/>
       </figure>
       <nav>
-        <InternalLinks/>
+        <InternalLinks setOpenMenu={setOpenMenu}/>
         <SocialMedia />       
       </nav>
       <div className={styles.toggleMenu} onClick={() => setOpenMenu(!openMenu)}>
           <FiMenu />
       </div>
     </header>
-    {openMenu && 
+    {openMenu &&
       <nav className={styles.mobileMenu}>
-        <InternalLinks linkStyle="mobile"/>
+        <InternalLinks linkStyle="mobile" setOpenMenu={setOpenMenu}/>
         <div className={styles.socialMediaContainer}>
           <SocialMedia />
         </div>

@@ -30,20 +30,10 @@
     display: none;
   }
 }
+ .mobileMenu {
+  display: none;
+ }
 
-.mobileMenu {
-  display: flex;
-  flex-direction: column;
-  background-color: $dark-grey;
-  position: absolute;
-  width: 100%;
-
-  .socialMediaContainer {
-    padding: 15px 0;
-    width: 100%;
-    text-align: center;
-  }
-}
 
 @media screen and (max-width: $mobile-devices) {
   .headerContainer {
@@ -67,5 +57,18 @@
         }
       }
     }
-  } 
+  }
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: $dark-grey;
+    position: absolute;
+    width: 100%;
+  
+    .socialMediaContainer {
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
