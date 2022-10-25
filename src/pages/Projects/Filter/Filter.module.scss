@@ -1,0 +1,102 @@
+@import 'styles/default';
+@import 'styles/breakpoints';
+
+.filterBackground {
+  background-color: rgba(0,0,0,.05);
+  padding: 1rem $padding-default;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+
+  .filterContainer {
+    background-color: $white-default;
+    border-radius: 4px;
+    display: flex;
+    width: 40%;
+    position: relative;
+
+    .filterMode {
+      width: 100%;
+      padding: .5rem 1rem;
+      border: 1px solid $medium-grey;
+      border-radius: 4px 0 0 4px;
+      font-size: 1.2rem;
+      color: $medium-grey;
+      font-weight: 300;
+    }
+  }
+
+  .optionContainer {
+    width: 10%;
+    background-color: $white-default;
+
+    .filter {
+      background-color: $white-default;
+      padding: .5rem 1rem;
+      border: 1px solid $medium-grey;
+      border-radius: 0 4px 4px 0;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: $medium-grey;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .option {
+      background-color: $white-default;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      border: 1px solid $medium-grey;
+      border-bottom: 0;
+      font-size: 1.2rem;
+      text-align: center;
+      font-weight: 300;
+      color: $medium-grey;
+      transition: all .2s;
+
+      &:hover {
+        color: $white-default;
+        background-color: $dark-grey;
+      } 
+
+      &:first-child {
+        border-radius: 0 4px 0 0;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $medium-grey;
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-devices) {
+  .filterBackground {
+    flex-direction: column;
+    padding: 2rem $padding-mobile;
+
+    .filterContainer {
+      width: 100%;
+      .filterMode {
+        border-radius: 4px 4px 0 0;
+        text-align: center;
+      }
+    }
+
+    .optionContainer {
+      width: 100%;
+
+      .filter {
+        border-radius: 0 0 4px 4px;
+      }
+
+      .option {
+        border-radius: 0;
+        &:first-child {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

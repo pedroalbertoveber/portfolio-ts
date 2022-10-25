@@ -1,17 +1,21 @@
-import React, { ReactElement, useEffect, useContext } from "react";
+import React, { ReactElement, useEffect, useContext, useState } from "react";
 import { ProjectContext } from "common/ProjectsContext";
-import { search } from "services/api";
+import { handleFilterList } from "services/api";
 import Banner from "../../components/Banner";
 import styles from './Projects.module.scss';
 import ProjectCard from "components/ProjectCard";
+import Filter from "./Filter";
+import { IFilter } from "interface/Filter";
 
 const Projects = (): ReactElement => {
 
   const { projectList, setProjectList } = useContext(ProjectContext);
+  const [ filter, setFilter ] = useState<IFilter>({ id: 'All', displayName: 'Todos'});
 
   useEffect(() => {
-    search('repos', setProjectList);
-  }, [ setProjectList, projectList]);
+    handleFilterList('repos', setProjectList, filter);
+  }, [ setProjectList, filter ]);
+
 
   const title = 'portfólio.';
   const subtitle = 'Confira alguns dos meus últimos trabalhos como desenvolvedor de front-end.';
@@ -20,6 +24,7 @@ const Projects = (): ReactElement => {
   return (
     <main>
       <Banner title={title} subtitle={subtitle} description={description}/>
+      <Filter filter={filter} setFilter={setFilter} />
       <section className={styles.projectsContainer}>
         {projectList.map(item => <ProjectCard {...item} key={item.id}/>)}
       </section>

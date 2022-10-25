@@ -1,0 +1,26 @@
+[
+  {
+    "id": "All",
+    "displayName": "Todos"
+  },
+  {
+    "id": "HTML",
+    "displayName": "HTML:5"
+  },
+  {
+    "id": "CSS",
+    "displayName": "CSS:3"
+  },
+  {
+    "id": "JavaScript",
+    "displayName": "JavaScript"
+  },
+  {
+    "id": "TypeScript",
+    "displayName": "Typescript"
+  },
+  {
+    "id": "Jupyter Notebook",
+    "displayName": "Python"
+  }
+]
