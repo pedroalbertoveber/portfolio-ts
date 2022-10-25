@@ -1,0 +1,19 @@
+@import 'styles/default';
+@import 'styles/breakpoints';
+
+.projectsContainer {
+  width: 100%;
+  background-color: $light-grey;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem $padding-mobile;
+  align-items: center;
+  box-shadow: inset 0 5px 14px rgba(0,0,0,.03);
+}
+
+@media screen and (min-width: $mobile-devices) {
+  .projectsContainer {
+    padding: 3rem $padding-default;
+  }
+}

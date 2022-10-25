@@ -12,7 +12,7 @@ const Header = ():ReactElement => {
     <>
     <header className={styles.headerContainer}>
       <figure>
-        <img src="assets/pictures/perfil.jpeg"/>
+        <img src="assets/pictures/perfil.jpeg" alt="profile"/>
       </figure>
       <nav>
         <InternalLinks setOpenMenu={setOpenMenu}/>
