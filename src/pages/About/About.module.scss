@@ -1,0 +1,54 @@
+@import 'styles/default';
+@import 'styles/breakpoints';
+
+.aboutContainer {
+  background-color: $light-grey;
+  padding: 3rem $padding-default;
+  box-shadow: inset -15px 0 15px rgba(0,0,0,.05);
+
+  @media screen and (max-width: $mobile-devices) {
+    padding: 3rem $padding-mobile;
+  }
+
+  div {
+    background-color: $white-default;
+    padding: 2rem 1rem;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $medium-grey;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: $medium-grey;
+      padding-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+      color: $dark-default;
+      font-weight: 300;
+      
+      &:last-child{
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: $mobile-devices) {
+      h2 {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: justify;
+        line-height: 1.3rem;
+        word-break: break-word;
+      }
+    }
+  }
+}
