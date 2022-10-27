@@ -1,4 +1,4 @@
-export interface IProject {
+export type IProject = {
   id: number,
   nome_id: string,
   name: string,

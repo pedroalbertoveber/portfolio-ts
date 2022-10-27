@@ -1,0 +1,35 @@
+[
+  {
+    "id": "tl-consultoria",
+    "company": "TL Consultoria",
+    "currentJob": true,
+    "job": "Consultor de Seguros",
+    "description": "Sou responsável por todo o controle de faturamentos de seguros de vida. Também atuo no setor administrativo onde controlo todas as pendências securitárias dos corretores de nossa grade. Desenvolvi um projeto em Python, o qual automatiza diversas tarefas a fim de ter mais tempo para realizar outras tarefas diárias.",
+    "year": {
+      "joined": "07/2021",
+      "quit": "Atualmente"
+    }
+  },
+  {
+    "id": "estagiario-braslux",
+    "company": "Braslux",
+    "currentJob": false,
+    "job": "Estagiário de Laboratório",
+    "description": "Atuava como estagiário de laboratório onde realizava testes em amostrar de lanternas, submetendo as mesmas em variações de temperaturas, impactos, jatos de água e poeira, e exposição UV. Também era responsável por toda a documentação dos testes realizados.",
+    "year": {
+      "joined": "02/2021",
+      "quit": "05/2021"
+    }
+  },
+  {
+    "id": "amparo-seguros",
+    "company": "Amparo Seguros",
+    "currentJob": false,
+    "job": "Assistente Administrativo",
+    "description": "Atuei na parte comercial da corretora, onde era responsável por realizar as cotações de seguro, de todos os ramos, e acompanhar a venda até a emissão da apólice. Também atuei na parte administrativa onde cuidava de todas as renovações e fazia as estatísticas da corretora via excel.",
+    "year": {
+      "joined": "08/2017",
+      "quit": "12/2020"
+    }
+  }
+]

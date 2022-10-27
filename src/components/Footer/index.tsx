@@ -6,11 +6,13 @@ const Footer = (): ReactElement => {
   return (
     <footer className={styles.footerContainer}>
       <div>
-        <span>&copy; 2022 - Pedro Alberto</span>
-        <InternalLinks linkStyle="footer"/>
+        <span>&copy;2022 - Pedro Alberto</span>
       </div>
+      <nav>
+        <InternalLinks linkStyle="footer"/>
+      </nav>
     </footer>
-  );
+  )
 };
 
 export default Footer;

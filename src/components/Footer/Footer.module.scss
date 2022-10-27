@@ -2,28 +2,24 @@
 @import 'styles/breakpoints';
 
 .footerContainer {
-  background-color: #f4f4f4;
-  position: absolute;
+  background-color: $light-grey;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem $padding-default;
   width: 100%;
-  height: 100px;
-  color: $dark-default;
 
-  div {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: $mobile-devices) {
-  .footerContainer div {
+  @media screen and (max-width: $mobile-devices) {
+    box-shadow: inset 15px 0 15px rgba(0,0,0,.05);
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    padding: 1rem $padding-mobile;
 
-  
+    div {
+      padding: 1rem 0;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
+

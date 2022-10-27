@@ -81,6 +81,11 @@
   .footer {
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    padding: 25px 15px;
+
+    li {
+      font-size: 1rem;
+      margin-right: 15px;
+    }
   }
 }

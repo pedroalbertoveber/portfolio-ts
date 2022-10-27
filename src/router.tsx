@@ -1,5 +1,6 @@
 import Default from "components/Default";
 import About from "pages/About";
+import Experiences from "pages/Experiences";
 import Home from "pages/Home";
 import Projects from "pages/Projects";
 import React, { ReactElement } from "react";
@@ -13,6 +14,7 @@ const Router = (): ReactElement => {
           <Route index element={<Home />} />
           <Route path="portfolio" element={<Projects />} />
           <Route path="sobre" element={<About />} />
+          <Route path="experiencias" element={<Experiences />} />
         </Route>
       </Routes>
     </BrowserRouter>
