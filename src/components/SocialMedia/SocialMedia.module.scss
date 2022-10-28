@@ -1,0 +1,75 @@
+@import 'styles/default';
+@import 'styles/breakpoints';
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+
+  li {
+    margin-right: 25px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  a svg {
+    color: $white-default;
+    font-size: 1.8rem;
+    transition: all .2s;
+
+    &:hover {
+      color: $medium-grey;
+    }
+  }
+}
+
+.contact {
+
+  padding: 2rem 0;
+  width: 100%;
+  justify-content: space-between;
+
+  li {
+    margin: 0 15px;
+    &:last-child {
+      margin: 0 15px;
+    }
+
+    a svg {
+      color: $medium-grey;
+      font-size: 5rem;
+
+      &:hover {
+        color: $dark-default;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-devices) {
+  .socialMedia {
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: $mobile-devices) {
+  .contact {
+    justify-content: space-between;
+
+    li a svg {
+      font-size: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: $smartphones) {
+  .contact {
+    justify-content: space-between;
+
+    li a svg {
+      font-size: 2rem;
+    }
+  }
+}

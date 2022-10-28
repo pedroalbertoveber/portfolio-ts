@@ -1,0 +1,65 @@
+@import 'styles/default';
+@import 'styles/breakpoints';
+
+.infoContainer {
+  padding: 2rem $padding-default;
+  background-color: $light-grey;
+  box-shadow: inset 15px 0 15px rgba(0,0,0,.05);
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: $mobile-devices) {
+    padding: 2rem $padding-mobile;
+    h4 {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.contactContainer {
+  padding: 2rem $padding-default;
+  box-shadow: inset 15px 0 15px rgba(0,0,0,.05);
+
+  ul li {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+
+    svg { 
+      font-size: 2rem;
+      margin-right: 1rem;
+      color: $medium-grey;
+    }
+
+    span {
+      font-size: 1.2rem;
+      color: $medium-grey;
+    }
+  }
+
+  @media screen and (max-width: $mobile-devices) {
+    padding: 2rem $padding-mobile;
+
+    ul li span {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: $smartphones) {
+    padding: 2rem $padding-mobile;
+
+    ul li span {
+      font-size: 1rem;
+    }
+  }
+}
+
+.mediaContainer {
+  padding: 2rem $padding-default;
+  box-shadow: inset 15px 0 15px rgba(0,0,0,.05);
+
+  @media screen and (max-width: $mobile-devices) {
+    padding: 2rem $padding-mobile;
+  }
+}

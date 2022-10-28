@@ -4,8 +4,7 @@ import styles from './Banner.module.scss';
 interface Props {
   title: string,
   subtitle: string,
-  description: string,
-  someComponents?: ReactElement[],
+  description?: string,
 }
 
 const Banner = ({ title, subtitle, description }: Props): ReactElement => {

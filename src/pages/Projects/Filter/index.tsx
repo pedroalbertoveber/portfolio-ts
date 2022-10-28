@@ -25,7 +25,7 @@ const Filter = ({ filter, setFilter }: Props ):ReactElement => {
   return (
     <div className={styles.filterBackground}>
       <div className={styles.filterContainer}>
-        <div className={styles.filterMode}>Filtre de acordo com a linguagem mais usada</div>
+        <div className={styles.filterMode}>Linguagem utilizada</div>
       </div>
       <div className={styles.optionContainer}>
           {isOpen ? 
