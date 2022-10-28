@@ -1,0 +1,34 @@
+@import 'styles/default';
+@import 'styles/breakpoints';
+
+.container {
+  background-color: $white-default;
+  padding: 2rem $padding-default;
+  box-shadow: inset 15px 0 15px rgba(0,0,0,.05);
+
+  div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+
+    svg {
+      font-size: 2rem;
+      color: $medium-grey;
+      margin-right: 1rem;
+      transition: all .2s;
+
+      &:hover {
+        color: $dark-default;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-devices) {
+    padding: 2rem $padding-mobile;
+
+    div {
+      font-size: 1rem;
+    }
+  }
+}

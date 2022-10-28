@@ -11,22 +11,22 @@ const SocialMedia = ({ style }: Props): ReactElement => {
   return (
     <ul className={`${styles.socialMedia} ${style === 'contact' && styles.contact}`}>
           <li>
-            <a href="#">
+            <a href="https://github.com/pedroalbertoveber" target={'_blank'} rel="noreferrer">
               <FaGithub />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://www.facebook.com/pedro.veber.3" target={'_blank'} rel="noreferrer">
               <FaFacebookF />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/pedro-alberto-veber-berna-a367551ba/" target={'_blank'} rel="noreferrer">
               <FaLinkedinIn />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://www.instagram.com/pedroveber_/"  target={'_blank'} rel="noreferrer">
               <FaInstagram />
             </a>
           </li>

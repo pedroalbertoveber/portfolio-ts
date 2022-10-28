@@ -4,6 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { MdOutlineAlternateEmail } from 'react-icons/md'
 import React, { ReactElement } from 'react';
 import styles from './Contact.module.scss';
+import GoBack from 'components/GoBack';
 
 const Contact = (): ReactElement => {
 
@@ -12,6 +13,7 @@ const Contact = (): ReactElement => {
 
   return (
     <section>
+      <GoBack />
       <Banner title={title} subtitle={subtitle} />
       <div className={styles.infoContainer}>
         <h4>Abaixo estão as as minhas redes sociais:</h4>
@@ -29,7 +31,7 @@ const Contact = (): ReactElement => {
         </ul>
       </div>
       <div className={styles.mediaContainer}>
-        <SocialMedia style='contact'/>
+        <SocialMedia style={'contact'}/>
       </div>
     </section>
   );

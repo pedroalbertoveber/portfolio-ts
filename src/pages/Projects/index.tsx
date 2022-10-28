@@ -6,6 +6,7 @@ import styles from './Projects.module.scss';
 import ProjectCard from "components/ProjectCard";
 import Filter from "./Filter";
 import { IFilter } from "interface/Filter";
+import GoBack from "components/GoBack";
 
 const Projects = (): ReactElement => {
 
@@ -22,7 +23,7 @@ const Projects = (): ReactElement => {
 
   useEffect(() => {
     handleSearch();
-  }, [filter]);
+  }, [filter, handleSearch]);
 
   const title = 'portfólio.';
   const subtitle = 'Confira alguns dos meus últimos trabalhos como desenvolvedor de front-end.';
@@ -30,6 +31,7 @@ const Projects = (): ReactElement => {
 
   return (
     <main>
+      <GoBack />
       <Banner title={title} subtitle={subtitle} description={description}/>
       <Filter filter={filter} setFilter={setFilter} />
       <section className={styles.projectsContainer}>

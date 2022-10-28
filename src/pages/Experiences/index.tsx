@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react';
 import experienceList from 'data/experiences.json';
 import styles from './Experiences.module.scss';
 import ExperienceCard from './ExperienceCard';
+import GoBack from 'components/GoBack';
 
 const Experiences = ():ReactElement => {
 
@@ -14,6 +15,7 @@ const Experiences = ():ReactElement => {
 
   return (
     <section>
+      <GoBack />
       <Banner title={title} subtitle={subtitle} description={description} />
       <div className={styles.title}>
         <h2>Empresas onde pude contribuir</h2>

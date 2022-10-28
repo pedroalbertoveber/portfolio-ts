@@ -1,4 +1,5 @@
 import Banner from 'components/Banner';
+import GoBack from 'components/GoBack';
 import React, { ReactElement } from 'react';
 import styles from './About.module.scss';
 
@@ -10,6 +11,7 @@ const About = ():ReactElement => {
 
   return (
     <main>
+      <GoBack />
       <Banner title={title} subtitle={subtitle} description={description} />
       <section className={styles.aboutContainer}>
         <div>
