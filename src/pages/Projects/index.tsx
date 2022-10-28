@@ -12,6 +12,7 @@ const Projects = (): ReactElement => {
 
   const { projectList, setProjectList } = useContext(ProjectContext);
   const [ filter, setFilter ] = useState<IFilter>({ id: 'All', displayName: 'Todos'});
+  const [ loading, setLoading ] = useState<boolean>(true);
 
   const handleSearch = async () => {
     const projects = await handleFilterList('repos');
@@ -22,7 +23,10 @@ const Projects = (): ReactElement => {
   };
 
   useEffect(() => {
+    setLoading(true);
+
     handleSearch();
+    setLoading(false);
   }, [filter, handleSearch]);
 
   const title = 'portfólio.';
@@ -34,9 +38,15 @@ const Projects = (): ReactElement => {
       <GoBack />
       <Banner title={title} subtitle={subtitle} description={description}/>
       <Filter filter={filter} setFilter={setFilter} />
-      <section className={styles.projectsContainer}>
-        {projectList.map(item => <ProjectCard {...item} key={item.id}/>)}
-      </section>
+      { loading ? 
+        <div className={styles.loadingContainer}>
+          <span className={styles.loading}></span>
+        </div>
+        :
+        <section className={styles.projectsContainer}>
+          {projectList.map(item => <ProjectCard {...item} key={item.id}/>)}
+        </section>}
+
     </main>
   );
 };
