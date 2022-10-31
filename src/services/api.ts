@@ -1,5 +1,4 @@
 import axios from "axios";
-import { IFilter } from "interface/Filter";
 import { IProject } from "interface/Project";
 
 export const api = axios.create({
